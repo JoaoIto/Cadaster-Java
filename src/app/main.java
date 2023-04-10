@@ -35,7 +35,17 @@ public class main {
                         String senha = scan.next();
 
                         profiles[i] = new Profile(nome, email, senha, i);
+
+                        System.out.println("Deseja cadastrar mais perfis? \n Se sim digite 1: \n Se não digite 2: ");
+                        int decision = scan.nextInt();
+
+                        if(decision == 2){
+                            i = 5;
+                        }
                     }
+                }
+                case 2 -> {
+                    System.out.println("Estamos no sistema de login: ");
                 }
             }
         } while (menu == 1);
